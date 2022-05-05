@@ -1,0 +1,8 @@
+com/example/TryFlyway/service/DemoService.class
+com/example/TryFlyway/TryFlywayApplication.class
+com/example/TryFlyway/service/PersonService.class
+com/example/TryFlyway/RestTemplateConfig.class
+com/example/TryFlyway/controller/PersonsController.class
+com/example/TryFlyway/model/Person.class
+com/example/TryFlyway/model/Users.class
+com/example/TryFlyway/repository/PersonRepository.class
