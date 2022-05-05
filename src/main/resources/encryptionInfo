@@ -1,0 +1,19 @@
+Generate a keystore :
+
+Use the below command in terminal to generate a self signed certificate
+
+keytool -genkeypair -alias https-example  -keystore https-example.jks -validity 3650 -storepass changeit -keyalg RSA -keysize 2048 -storetype JKS
+
+After running above it will ask for some fields fill them accordingly
+
+Add them to application.properties
+server.ssl.key-alias=https-example
+server.ssl.key-store-type=JKS
+server.ssl.key-password=changeit
+server.ssl.key-store=classpath:https-example.jks
+
+Add the generated certificate to resources directory in application
+
+
+After running the application see in log
+ Tomcat started on port(s): 8080 (https) with context path ''

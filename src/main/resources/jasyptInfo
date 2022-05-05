@@ -1,0 +1,21 @@
+To encrypt secret : mvn jasypt:encrypt-value -Djasypt.encryptor.password=<jasypt-key> -Djasypt.plugin.value=<secret-key-to-be-encrypted>
+
+To decrypt :mvn jasypt:decrypt-value -Djasypt.encryptor.password=<jasypt-key> -Djasypt.plugin.value=<encrypted-value>
+
+Add password to VM configurations
+
+-Djasypt.encryptor.password=<jasypt-key>
+
+eg:
+
+Encryption
+
+mvn jasypt:encrypt-value -Djasypt.encryptor.password=jasyptPassword -Djasypt.plugin.value="secret-key"
+
+Result->ENC(aerfvbnkdsfvbnmhgfds34tvbnhgfdxcvbnm)
+
+Decryption
+
+mvn jasypt:decrypt-value -Djasypt.encryptor.password=jasyptPassword -Djasypt.plugin.value=aerfvbnkdsfvbnmhgfds34tvbnhgfdxcvbnm
+
+Result->secret-key
